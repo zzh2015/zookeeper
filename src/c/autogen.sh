@@ -1,3 +1,3 @@
 #!/bin/bash
 
-autoreconf -ivf
+ACLOCAL="aclocal -I /usr/local/share/aclocal" autoreconf -if
