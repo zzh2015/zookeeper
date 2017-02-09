@@ -1,4 +1,4 @@
-m4trace:aclocal.m4:9845: -1- m4_include([acinclude.m4])
+m4trace:aclocal.m4:10294: -1- m4_include([acinclude.m4])
 m4trace:configure.ac:6: -1- AC_INIT([zookeeper C client], [3.4.9], [user@zookeeper.apache.org], [zookeeper])
 m4trace:configure.ac:6: -1- m4_pattern_forbid([^_?A[CHUM]_])
 m4trace:configure.ac:6: -1- m4_pattern_forbid([_AC_])
@@ -64,6 +64,9 @@ m4trace:configure.ac:6: -1- m4_pattern_allow([^sharedstatedir$])
 m4trace:configure.ac:6: -1- AC_SUBST([localstatedir], ['${prefix}/var'])
 m4trace:configure.ac:6: -1- AC_SUBST_TRACE([localstatedir])
 m4trace:configure.ac:6: -1- m4_pattern_allow([^localstatedir$])
+m4trace:configure.ac:6: -1- AC_SUBST([runstatedir], ['${localstatedir}/run'])
+m4trace:configure.ac:6: -1- AC_SUBST_TRACE([runstatedir])
+m4trace:configure.ac:6: -1- m4_pattern_allow([^runstatedir$])
 m4trace:configure.ac:6: -1- AC_SUBST([includedir], ['${prefix}/include'])
 m4trace:configure.ac:6: -1- AC_SUBST_TRACE([includedir])
 m4trace:configure.ac:6: -1- m4_pattern_allow([^includedir$])
@@ -623,7 +626,7 @@ m4trace:configure.ac:22: -1- AC_SUBST_TRACE([DX_ENV])
 m4trace:configure.ac:22: -1- m4_pattern_allow([^DX_ENV$])
 m4trace:configure.ac:25: -1- AM_INIT_AUTOMAKE([-Wall foreign])
 m4trace:configure.ac:25: -1- m4_pattern_allow([^AM_[A-Z]+FLAGS$])
-m4trace:configure.ac:25: -1- AM_AUTOMAKE_VERSION([1.14.1])
+m4trace:configure.ac:25: -1- AM_AUTOMAKE_VERSION([1.15])
 m4trace:configure.ac:25: -1- AC_REQUIRE_AUX_FILE([install-sh])
 m4trace:configure.ac:25: -1- AC_SUBST([INSTALL_PROGRAM])
 m4trace:configure.ac:25: -1- AC_SUBST_TRACE([INSTALL_PROGRAM])
@@ -731,15 +734,15 @@ m4trace:configure.ac:37: -1- m4_pattern_allow([^CPPUNIT_CFLAGS$])
 m4trace:configure.ac:37: -1- AC_SUBST([CPPUNIT_LIBS])
 m4trace:configure.ac:37: -1- AC_SUBST_TRACE([CPPUNIT_LIBS])
 m4trace:configure.ac:37: -1- m4_pattern_allow([^CPPUNIT_LIBS$])
-m4trace:configure.ac:44: -1- _m4_warn([cross], [cannot check for file existence when cross compiling], [../../lib/autoconf/general.m4:2777: AC_CHECK_FILE is expanded from...
-../../lib/autoconf/general.m4:2808: AC_CHECK_FILES is expanded from...
+m4trace:configure.ac:44: -1- _m4_warn([cross], [cannot check for file existence when cross compiling], [../../lib/autoconf/general.m4:2788: AC_CHECK_FILE is expanded from...
+../../lib/autoconf/general.m4:2819: AC_CHECK_FILES is expanded from...
 configure.ac:44: the top level])
 m4trace:configure.ac:44: -1- AC_DEFINE_TRACE_LITERAL([HAVE_GENERATED_ZOOKEEPER_JUTE_C])
 m4trace:configure.ac:44: -1- m4_pattern_allow([^HAVE_GENERATED_ZOOKEEPER_JUTE_C$])
 m4trace:configure.ac:44: -1- AH_OUTPUT([HAVE_GENERATED_ZOOKEEPER_JUTE_C], [/* Define to 1 if you have the file `generated/zookeeper.jute.c\'. */
 @%:@undef HAVE_GENERATED_ZOOKEEPER_JUTE_C])
-m4trace:configure.ac:44: -1- _m4_warn([cross], [cannot check for file existence when cross compiling], [../../lib/autoconf/general.m4:2777: AC_CHECK_FILE is expanded from...
-../../lib/autoconf/general.m4:2808: AC_CHECK_FILES is expanded from...
+m4trace:configure.ac:44: -1- _m4_warn([cross], [cannot check for file existence when cross compiling], [../../lib/autoconf/general.m4:2788: AC_CHECK_FILE is expanded from...
+../../lib/autoconf/general.m4:2819: AC_CHECK_FILES is expanded from...
 configure.ac:44: the top level])
 m4trace:configure.ac:44: -1- AC_DEFINE_TRACE_LITERAL([HAVE_GENERATED_ZOOKEEPER_JUTE_H])
 m4trace:configure.ac:44: -1- m4_pattern_allow([^HAVE_GENERATED_ZOOKEEPER_JUTE_H$])
@@ -866,7 +869,7 @@ m4trace:configure.ac:54: -1- AC_SUBST_TRACE([LN_S])
 m4trace:configure.ac:54: -1- m4_pattern_allow([^LN_S$])
 m4trace:configure.ac:57: -1- AC_PROG_LIBTOOL
 m4trace:configure.ac:57: -1- _m4_warn([obsolete], [The macro `AC_PROG_LIBTOOL' is obsolete.
-You should run autoupdate.], [aclocal.m4:1349: AC_PROG_LIBTOOL is expanded from...
+You should run autoupdate.], [aclocal.m4:214: AC_PROG_LIBTOOL is expanded from...
 configure.ac:57: the top level])
 m4trace:configure.ac:57: -1- LT_INIT
 m4trace:configure.ac:57: -1- m4_pattern_forbid([^_?LT_[A-Z_]+$])
@@ -960,8 +963,7 @@ m4trace:configure.ac:57: -1- m4_pattern_allow([^RANLIB$])
 m4trace:configure.ac:57: -1- m4_pattern_allow([LT_OBJDIR])
 m4trace:configure.ac:57: -1- AC_DEFINE_TRACE_LITERAL([LT_OBJDIR])
 m4trace:configure.ac:57: -1- m4_pattern_allow([^LT_OBJDIR$])
-m4trace:configure.ac:57: -1- AH_OUTPUT([LT_OBJDIR], [/* Define to the sub-directory in which libtool stores uninstalled libraries.
-   */
+m4trace:configure.ac:57: -1- AH_OUTPUT([LT_OBJDIR], [/* Define to the sub-directory where libtool stores uninstalled libraries. */
 @%:@undef LT_OBJDIR])
 m4trace:configure.ac:57: -1- LT_SUPPORTED_TAG([CC])
 m4trace:configure.ac:57: -1- AC_SUBST([MANIFEST_TOOL])
@@ -982,6 +984,9 @@ m4trace:configure.ac:57: -1- m4_pattern_allow([^OTOOL$])
 m4trace:configure.ac:57: -1- AC_SUBST([OTOOL64])
 m4trace:configure.ac:57: -1- AC_SUBST_TRACE([OTOOL64])
 m4trace:configure.ac:57: -1- m4_pattern_allow([^OTOOL64$])
+m4trace:configure.ac:57: -1- AC_SUBST([LT_SYS_LIBRARY_PATH])
+m4trace:configure.ac:57: -1- AC_SUBST_TRACE([LT_SYS_LIBRARY_PATH])
+m4trace:configure.ac:57: -1- m4_pattern_allow([^LT_SYS_LIBRARY_PATH$])
 m4trace:configure.ac:57: -1- AH_OUTPUT([HAVE_DLFCN_H], [/* Define to 1 if you have the <dlfcn.h> header file. */
 @%:@undef HAVE_DLFCN_H])
 m4trace:configure.ac:57: -1- AC_SUBST([CPP])
@@ -1030,6 +1035,9 @@ m4trace:configure.ac:57: -1- m4_pattern_allow([^CXXCPP$])
 m4trace:configure.ac:57: -1- AC_SUBST([LD])
 m4trace:configure.ac:57: -1- AC_SUBST_TRACE([LD])
 m4trace:configure.ac:57: -1- m4_pattern_allow([^LD$])
+m4trace:configure.ac:57: -1- AC_SUBST([LT_SYS_LIBRARY_PATH])
+m4trace:configure.ac:57: -1- AC_SUBST_TRACE([LT_SYS_LIBRARY_PATH])
+m4trace:configure.ac:57: -1- m4_pattern_allow([^LT_SYS_LIBRARY_PATH$])
 m4trace:configure.ac:106: -1- AM_CONDITIONAL([WANT_SYNCAPI], [test "x$with_syncapi" != xno])
 m4trace:configure.ac:106: -1- AC_SUBST([WANT_SYNCAPI_TRUE])
 m4trace:configure.ac:106: -1- AC_SUBST_TRACE([WANT_SYNCAPI_TRUE])
@@ -1085,7 +1093,7 @@ m4trace:configure.ac:116: -1- m4_pattern_allow([^POLL_NFDS_TYPE$])
 m4trace:configure.ac:116: -1- AH_OUTPUT([POLL_NFDS_TYPE], [/* poll() second argument type */
 @%:@undef POLL_NFDS_TYPE])
 m4trace:configure.ac:123: -1- _m4_warn([obsolete], [The macro `AC_TRY_RUN' is obsolete.
-You should run autoupdate.], [../../lib/autoconf/general.m4:2764: AC_TRY_RUN is expanded from...
+You should run autoupdate.], [../../lib/autoconf/general.m4:2775: AC_TRY_RUN is expanded from...
 configure.ac:123: the top level])
 m4trace:configure.ac:142: -1- AC_SUBST([USEIPV6])
 m4trace:configure.ac:142: -1- AC_SUBST_TRACE([USEIPV6])
